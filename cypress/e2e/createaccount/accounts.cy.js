@@ -4,6 +4,7 @@ describe("verify the user can create an account", () => {
     Cypress.on("uncaught:exception",()=>{
         return false
     })
+    
   beforeEach("url", () => {
     cy.visit(
       "https://magento-demo.mageplaza.com/default/customer/account/create/"

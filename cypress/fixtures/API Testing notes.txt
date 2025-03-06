@@ -1,0 +1,122 @@
+workspace : in the workspace we maintain the files like test cases, requasts, test data
+saved inside the workspaces
+
+collection : in the collection we have to maintain the test cases under one workspace we can create 
+n number of workspace or collection contains number of folders and number of http request
+
+api assertion 
+1. test the response status code  (this is arrow function)
+ 
+     ex:   pm.test("status code is 200", () =>{
+               pm.respones.to.have.status(200)
+         })
+
+       ex2:   (this is function)
+                pm.test("status code is 200",function () {
+                   pm.respones.to.have.status(200)
+              })
+
+2.where we write this 
+in the postman in any request in the tests tab inside the window to write the validation 
+
+3. if i want to test for the status code being one of a set
+   include them all in the an array and use one of
+
+  pm.test("successful post request",()=>{
+  pm.expect(pm.response.code).to.be.oneOff([201,202])
+  })
+4.check the status code text
+
+    pm.test("status code is 200", () =>{
+               pm.respones.to.have.status(" ")
+         })
+5. check that a respones header is present or not
+  pm.test("test name",()=>{
+ pm.response.to have.header("any header name")
+})
+
+6. check that a respones header value is currect or not
+  pm.test("test name",()=>{
+ pm.expect(pm.response.headers.get('header name')).to.eql('header value')
+})
+
+7. test if a cooki is present in the response
+  pm.("test name",()=>{
+  pm.expect(pm.cookies.has('cookies name')).to.be.true
+   })
+8.test for a particular cookie value
+   pm.("test name",()=>{
+  pm.expect(pm.cookies.get('cookies name')).to.eql('cookie value')
+   })
+9.test for the response time to be within aspecified range
+  pm.("test name",()=>{
+  pm.expect(pm.response.responseTime).to.be.below(200/300/500)
+   })
+
+10. test the type any part of the response body like string/number/object
+ (to validate like id is number or not
+     and name is string or not
+    )
+
+const jsonData = pm.response.json();   (this is capture the response)
+
+pm.test("Test data type of the response", () => {
+
+pm.expect(jsonData).to.be.an ("object");
+
+pm.expect(jsonData.name).to.be.a("string");
+
+pm.expect(jsonData.id).to.be.a ("number");
+
+pm.expect(jsonData.courses).to.be.an ("array");
+
+});
+
+11. check if an array is empty and if it contains particular value or not
+ 
+  pm.test("Test array properties", () => {
+
+//this is for validate single value
+
+pm.expect(variablename.arrayname).to.include ("Java");
+
+//this is for validate multiple values
+
+pm.expect(variablename.arrayname)
+
+.to.have.members(["Java", "Selenium"]);
+
+});
+
+12.validating the json fields 
+
+  pm.test("value of location field is India", () =>
+
+Ivar jsonData = pm.response.json();
+
+pm.expect(variable name.json path).to.eql(1);
+
+ exs:  pm.expect(jsonData.id).to.eql(1);
+
+pm.expect(jsonData.name).to.eql("John");
+
+pm.expect(jsonData.location).to.eql("india");
+
+pm.expect(jsonData.phone).to.eql ("1234567890");
+
+pm.expect(jsonData.courses[0]).to.eql("Java");
+
+pm.expect(jsonData.courses[1]).to.eql("Selenium");
+
+});
+
+
+
+
+
+
+
+
+
+
+

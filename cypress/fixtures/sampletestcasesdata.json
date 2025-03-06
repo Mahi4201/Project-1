@@ -1,0 +1,17 @@
+{
+    "signupusername": "Mahesh",
+    "signupmailid": "mahesh1234@gmail.com",
+    "signuppassword": "mahesh@123",
+    "firstname": "bn",
+    "lastname": "Mahesh",
+    "companyname": "TCS",
+    "address": "1/105,Bengaluru near 8th mail",
+    "address2":"near 8th mail manjunath nagar,Bengaluru",
+    "state":"Andhra Pradesh",
+    "city": "Bengaluru",
+    "zipcode":"564765",
+    "mobilenumber": "1234567890",
+    "invalidemailid": "hcjhvgjcgh@gmail.com",
+    "invalidpassword": "ncnccjgv@123"
+
+}

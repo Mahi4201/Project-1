@@ -24,17 +24,17 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-import signinandloginlocators from "../POM/signinandloginlocators.po"
+import sampletestcaselocators from "../POM/sampletestcaselocators.po"
 import signupdata from "../fixtures/sampletestcasesdata.json"
 
 Cypress.Commands.add('createanddeleteaccount',()=>{
 
         cy.contains('Full-Fledged practice website for Automation Engineers').should('be.visible')
-        cy.get(signinandloginlocators.signinorloginlocator()).click()
+        cy.get(sampletestcaselocators.signinorloginlocator()).click()
         cy.contains('New User Signup!').should('be.visible')
-        cy.get(signinandloginlocators.signupnamelocator()).type(signupdata.signupusername)
-        cy.get(signinandloginlocators.signupemaillocator()).type(signupdata.signupmailid)
-        cy.get(signinandloginlocators.signupbuttonlocator()).click()
+        cy.get(sampletestcaselocators.signupnamelocator()).type(signupdata.signupusername)
+        cy.get(sampletestcaselocators.signupemaillocator()).type(signupdata.signupmailid)
+        cy.get(sampletestcaselocators.signupbuttonlocator()).click()
         cy.contains('Enter Account Information').should('be.visible')
         cy.get('input[value="Mr"]').check()
         cy.get('input[id="password"]').type(signupdata.signuppassword)

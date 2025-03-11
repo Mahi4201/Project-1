@@ -55,7 +55,17 @@ Cypress.Commands.add('createanddeleteaccount',()=>{
         cy.get('#mobile_number').type(signupdata.mobilenumber)
         cy.get('button[data-qa="create-account"]').click()
         cy.contains('Account Created!').should('be.visible')
-        cy.get('a[data-qa="continue-button"]').click()
+        cy.get(sampletestcaselocators.continuebutton()).click()
        
+        })
+        
+
+        Cypress.Commands.add('loginaccount',()=>{
+
+             cy.get(sampletestcaselocators.signinorloginlocator()).click()
+             cy.get(sampletestcaselocators.loginemaillocator()).type(signupdata.signupmailid)
+             cy.get(sampletestcaselocators.loginpasswordlocator()).type(signupdata.signuppassword)
+             cy.get(sampletestcaselocators.loginbuttonlocator()).click()
+             cy.contains('Logged in as Mahesh').should('be.visible')
         })
     

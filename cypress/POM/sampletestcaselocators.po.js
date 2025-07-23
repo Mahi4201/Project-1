@@ -83,6 +83,88 @@ class signinandlogin{
     clickonsubscribelocator(){
         return 'i[class="fa fa-arrow-circle-o-right"]'
     }
+    proceedtocheckoutbutton(){
+        return 'a[class="btn btn-default check_out"]'
+    }
+    gender2(){
+        return 'input[value="Mrs"]'
+    }
+    gender1(){
+        return 'input[value="Mr"]'
+    }
+    signuppasswordlocator(){
+        return 'input[id="password"]'
+    }
+    signupfirstnamelocator(){
+        return '#first_name'
+    }
+    signuplastnamelocator(){
+        return '#last_name'
+    }
+    signupcompanylocator(){
+        return '#company'
+    }
+    signupaddress1locator(){
+        return '#address1'
+    }
+    signupaddress2locator(){
+        return '#address2'
+    }
+    signupstatelocator(){
+        return '#state'
+    }
+    signupcitylocator(){
+        return '#city'
+    }
+    signupzipcodelocator(){
+        return '#zipcode'
+    }
+    signupmobilenumberlocator(){
+        return '#mobile_number'
+    }
+    createaccountbuttonlocator(){
+        return 'button[data-qa="create-account"]'
+    }
+    signupdaylocator(){
+        return 'select[id="days"]'
+    }
+    signupmonthlocator(){
+        return 'select[id="months"]'
+    }
+    signupyearlocator(){
+        return 'select[id="years"]'
+    }
+    signupcountrylocator(){
+        return 'select[name="country"]'
+    }
+    commentmassagelocator(){
+        return 'textarea[name="message"]'
+    }
+    placeorderlocator(){
+        return 'a[class="btn btn-default check_out"]'
+    }
+    cardnamelocator(){
+        return 'input[name="name_on_card"]'
+    }
+    cardnumberlocator(){
+        return 'input[data-qa="card-number"]'
+    }
+    cardcvclocator(){
+        return 'input[data-qa="cvc"]'
+    }
+    cardexpairemonthlocator(){
+        return 'input[name="expiry_month"]'
+    }
+    cardexpaireyearlocator(){
+        return 'input[data-qa="expiry-year"]'
+    }
+    payandconfirmorderlocator(){
+        return 'button[data-qa="pay-button"]'
+    }
+    removeproductincartlocator(){
+        return 'a[data-product-id="2"]'
+    }
+
 
 }
 
